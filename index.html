@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingCamp - To-Do List Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Section (Greeting, Time, & Theme Toggle) -->
+    <header class="card header-card">
+        <button id="theme-toggle" class="btn-theme">🌙 Mode</button>
+        <div id="clock">00:00:00</div>
+        <div id="date">Loading date...</div>
+        <h1 id="greeting">Good Morning, <span id="username" contenteditable="true">Guest</span> ✏️</h1>
+    </header>
+
+    <div class="grid-container">
+        <!-- Focus Timer Section -->
+        <section class="card">
+            <h2>Focus Timer</h2>
+            <div id="timer-display">25:00</div>
+            <div class="btn-group">
+                <button id="timer-start" class="btn btn-start">Start</button>
+                <button id="timer-stop" class="btn btn-stop">Stop</button>
+                <button id="timer-reset" class="btn btn-reset">Reset</button>
+            </div>
+        </section>
+
+        <!-- Tasks / To-Do List Section -->
+        <section class="card">
+            <h2>Tasks</h2>
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <button id="task-add" class="btn btn-start">Add</button>
+            </div>
+            <ul id="task-list"></ul>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="card full-width">
+            <h2>Quick Links</h2>
+            <div class="input-group">
+                <input type="text" id="link-name" placeholder="Link name">
+                <input type="url" id="link-url" placeholder="URL (https://...)">
+                <button id="link-add" class="btn btn-start">Add Link</button>
+            </div>
+            <div id="links-container"></div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
